@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Noto+Sans+Thai:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --main-color: #616161;
+    --accent-color: #000000;
+    --background-color: #616161;
+    --background-color-sub: #cecece;
+    --text-color: #212121;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.main-menu h1 {
+    font-family: 'Charm', sans-serif;
+}
+
+#transition {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    z-index: 9999;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+#page-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+#debug {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+button {
+    padding: 0.5em 1em;
+    font-size: 1em;
+}
+
+.page {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    background-image: url(./assets/images/image.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    transition: all .5s ease;
+}
+
+.main-menu h1 {
+    font-size: 5em;
+}
+
+.game-rule {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color-sub);
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all .2s ease;
+}
+
+#glon-info {
+    position: absolute;
+    top: 30%;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+}
+
+#glon-section {
+    display: grid;
+    height: 10em;
+    grid-template-columns: repeat(2, calc(50% - 0px));
+    width: 80%;
+    margin: auto;
+    gap: 0px;
+}
+
+#glon-section p {
+    font-size: 1.5em;
+    white-space: nowrap;
+}
+
+#answer-input {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 5em;
+    border-radius: 16px;
+    border: none;
+    padding: 0 1em;
+    font-size: 2em;
+}
+
+#timer {
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    color: var(--text-color);
+}
+
+#result {
+    position: absolute;
+    bottom: 10em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: var(--accent-color);
+    transition: all 0.05s linear;
+}
+
+@media screen and (max-width: 1100px) {
+    #glon-section p {
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #glon-section p {
+        font-size: 1em;
+    }
+    #glon-section {
+        width: 95%;
+        margin-left: 4em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #glon-section p {
+        font-size: 0.75em;
+    }
+    #glon-section {
+        width: 100%;
+        margin-left: 1em;
+    }
+}
+
+

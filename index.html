@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>gloninwtype</title>
+</head>
+<body>
+    <div id="transition"></div>
+    <div id="page-container">
+        <div class="page main-menu">
+            <h1>กลอนเทพพิมพ์</h1>
+            <button onmouseup="switchToPage('main')" onmousedown="setRandomGlon()">เริ่ม</button>
+        </div>
+        <div class="page main">
+            <div id="timer" style="display: none;"></div>
+            <div id="score">คะแนน: 0</div>
+            <div class="game-rule">
+                <h1>วิธีเล่น</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad hic a nulla voluptatibus ducimus ipsum cum, vitae quae animi. Quo ad omnis, magni quia nisi quae libero maxime aliquid ut.</p>
+                <button onmousedown="closeTuto()">ok</button>
+            </div>
+            <div id="glon-info">
+                <h1 id="glon-set"></h1>
+                <h2 id="glon-topic"></h2>
+            </div>
+            <div id="glon-section"></div>
+            <div id="answer-section">
+                <input type="text" name="answer" id="answer-input" placeholder="พิมพ์คำตอบที่นี่..." 
+                    onkeydown="if(event.key==='Enter'){checkAnswer()}">
+                <div id="result"></div>
+            </div>
+        </div>
+        <div class="page end">
+            <h1>เกมจบ</h1>
+            <p>ได้คะแนน: <span id="final-score"></span></p>
+            <button onmousedown="window.location.reload()">เริ่มใหม่</button>
+        </div>
+    </div>
+    <div id="debug" style="opacity: 0.2;">
+        <button onmousedown="switchToPage('main-menu')">menu</button>
+        <button onmousedown="switchToPage('main')">main</button>
+        <button onmousedown="setRandomGlon()">randomGlon</button>
+        <button onmousedown="highlight()">highlight</button>
+    </div>
+    <script src="/glons.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
