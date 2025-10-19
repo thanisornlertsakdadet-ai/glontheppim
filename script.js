@@ -1,6 +1,6 @@
 let highlightIndex = 0;
 let score = 0;
-let timerDuration = 5; // New variable for initial timer duration
+let timerDuration = 10; // New variable for initial timer duration
 let currentTimer = timerDuration; // The actual countdown value
 let tuto = true;
 let restartTimer = false;
