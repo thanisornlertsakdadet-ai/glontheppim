@@ -81,6 +81,15 @@ button {
     font-size: 5em;
 }
 
+#score {
+    width: 100;
+    position: absolute;
+    top: 1em;
+    font-size: 2em;
+    color: var(--text-color);
+    text-align: center;
+}
+
 .game-rule {
     position: absolute;
     top: 50%;
@@ -126,15 +135,16 @@ button {
     border: none;
     padding: 0 1em;
     font-size: 2em;
+    transition: all 0.2s ease;
 }
 
 #timer {
+    width: 100%;
     position: absolute;
-    top: 1em;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 3em;
     font-size: 2em;
     color: var(--text-color);
+    text-align: center;
 }
 
 #result {
@@ -147,30 +157,117 @@ button {
     transition: all 0.05s linear;
 }
 
-@media screen and (max-width: 1100px) {
-    #glon-section p {
-        font-size: 1.25em;
-    }
-}
-
 @media screen and (max-width: 900px) {
     #glon-section p {
-        font-size: 1em;
+        font-size: 1.5em;
+        margin: 0;
     }
     #glon-section {
-        width: 95%;
-        margin-left: 4em;
+        position: absolute;
+        width: 100%;
+        left: 1em;
+        top: 7em;
+        grid-template-columns: repeat(2, calc(50% - 0px));
+    }
+    
+    .game-rule {
+        width: 90vw;
+        padding: 1em;
+        top: 40%;
+        z-index: 999;
+    }
+    .main-menu h1 {
+        font-size: 3em;
+    }
+    #timer {
+        font-size: 1.5em;
+        left: 1em;
+        top: 2.5em;
+        transform: translate(0);
+        text-align: left;
+    }
+    #score {
+        font-size: 1.5em;
+        left: 1em;
+        top: 1em;
+        transform: translate(0);
+    }
+    #answer-input:focus {
+        position: absolute;
+        width: 90%;
+        height: 2em;
+        font-size: 1.5em;
     }
 }
 
 @media screen and (max-width: 600px) {
     #glon-section p {
         font-size: 0.75em;
+        margin: 0;
     }
     #glon-section {
+        position: absolute;
         width: 100%;
         margin-left: 1em;
+        top: 7em;
+        grid-template-columns: repeat(2, calc(50% - 0px));
+    }
+    
+    .game-rule {
+        width: 90vw;
+        padding: 1em;
+        top: 40%;
+        z-index: 999;
+    }
+    .main-menu h1 {
+        font-size: 3em;
+    }
+    #timer {
+        font-size: 1.5em;
+        left: 1em;
+        top: 2.5em;
+        transform: translate(0);
+        text-align: left;
+    }
+    #score {
+        font-size: 1.5em;
+        left: 1em;
+        top: 1em;
+        transform: translate(0);
+    }
+    #answer-input:focus {
+        position: absolute;
+        width: 90%;
+        height: 2em;
+        font-size: 1.5em;
+        bottom: 24em;
     }
 }
+
+@media screen and (max-height: 900px) {
+    #answer-input:focus {
+        bottom: 24em;
+    }
+}
+
+@media screen and (max-height: 850px) {
+    #answer-input:focus {
+        bottom: 22em;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    #answer-input:focus {
+        bottom: 18em;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    #answer-input:focus {
+        bottom: 15em;
+    }
+}
+
+
 
 

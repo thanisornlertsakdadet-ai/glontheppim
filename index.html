@@ -27,7 +27,7 @@
             </div>
             <div id="glon-section"></div>
             <div id="answer-section">
-                <input type="text" name="answer" id="answer-input" placeholder="พิมพ์คำตอบที่นี่..." 
+                <input type="text" name="answer" id="answer-input" autocomplete="false" placeholder="พิมพ์คำตอบที่นี่..." 
                     onkeydown="if(event.key==='Enter'){checkAnswer()}">
                 <div id="result"></div>
             </div>
@@ -38,7 +38,7 @@
             <button onmousedown="window.location.reload()">เริ่มใหม่</button>
         </div>
     </div>
-    <div id="debug" style="opacity: 0.1;">
+    <div id="debug" style="opacity: 0.01;">
         <button onmousedown="switchToPage('main-menu')">menu</button>
         <button onmousedown="switchToPage('main')">main</button>
         <button onmousedown="setRandomGlon()">randomGlon</button>
